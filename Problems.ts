@@ -9,13 +9,13 @@ const people = [
     { name: "Frank", age: 40, gender: "male" }
 ];
 
-const filterPeople = () => {
-    const females = people.filter((person) => person.gender !== 'female')
+const filterPeople = (peopleArray) => {
+    const females = peopleArray.filter((person) => person.gender !== 'female')
     const femaleNames = females.map((female) => female.name)
     console.log(femaleNames);
 }
 
-// filterPeople()
+filterPeople(people)
 
 
 // Write three functions: one to square a number, one to double a number, and one to add 5 to a number. Compose these functions to create a new function that squares a number, doubles the result, and then adds 5.
@@ -37,7 +37,7 @@ const finalFunc = (number) => {
 }
 
 const finalNumber = finalFunc(5)
-// console.log(finalNumber);
+console.log(finalNumber);
 
 
 
@@ -50,7 +50,7 @@ const cars = [
     { make: "BMW", model: "X5", year: 2019 }
 ];
 const sortCarByYear = cars.sort((a, b) => a.year - b.year)
-// console.log(sortCarByYear);
+console.log(sortCarByYear);
 
 
 // Write a function that searches an array of objects for a specific person by name. If found, modify their age property. Print the updated array.
@@ -73,14 +73,14 @@ const searcPeopleArrayByName = (personName, peopleArray, newAge) => {
     }
 }
 const searchRes = searcPeopleArrayByName('Ev0a', peopleArray, 5)
-// console.log(searchRes);
+console.log(searchRes);
 
 
 // Create an array of numbers. Write a function that uses the reduce method to calculate the sum of all even numbers in the array.
 const numbers = [1, 4, 7, 10, 13, 16, 19, 22];
 
 const sumOfNumbers = numbers.reduce((acc, current) => (acc + current), 0)
-// console.log(sumOfNumbers);
+console.log(sumOfNumbers);
 
 
 
